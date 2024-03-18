@@ -1,0 +1,9 @@
+{
+	"php": {
+		"ProviderLicenses": "Provider Licenses",
+		"SINGLE_ProviderLicenses": "Provider Licenses",
+		"LBL_CUSTOM_INFORMATION": "Custom Information",
+		"LBL_BASIC_INFORMATION": "Basic Information",
+		"License Name": "License Name"
+	}
+}

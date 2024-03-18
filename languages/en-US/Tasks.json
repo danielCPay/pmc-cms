@@ -1,0 +1,9 @@
+{
+	"php": {
+		"Tasks": "Tasks",
+		"SINGLE_Tasks": "Tasks",
+		"LBL_CUSTOM_INFORMATION": "Custom Information",
+		"LBL_BASIC_INFORMATION": "Basic Information",
+		"Task Name": "Task Name"
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"php": {
+		"ClaimCollections": "Claim Collections",
+		"SINGLE_ClaimCollections": "Claim Collections",
+		"LBL_CUSTOM_INFORMATION": "Custom Information",
+		"LBL_BASIC_INFORMATION": "Basic Information",
+		"Claim Collection Name": "Claim Collection Name"
+	}
+}

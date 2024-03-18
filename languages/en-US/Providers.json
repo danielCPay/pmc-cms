@@ -1,0 +1,9 @@
+{
+	"php": {
+		"Providers": "Providers",
+		"SINGLE_Providers": "Providers",
+		"LBL_CUSTOM_INFORMATION": "Custom Information",
+		"LBL_BASIC_INFORMATION": "Basic Information",
+		"Provider Name": "Provider Name"
+	}
+}

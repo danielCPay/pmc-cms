@@ -1,0 +1,9 @@
+{
+	"php": {
+		"Insureds": "Insureds",
+		"SINGLE_Insureds": "Insureds",
+		"LBL_CUSTOM_INFORMATION": "Custom Information",
+		"LBL_BASIC_INFORMATION": "Basic Information",
+		"Insured Name": "Insured Name"
+	}
+}

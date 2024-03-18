@@ -1,0 +1,9 @@
+{
+	"php": {
+		"DocumentPackages": "Document Packages",
+		"SINGLE_DocumentPackages": "Document Packages",
+		"LBL_CUSTOM_INFORMATION": "Custom Information",
+		"LBL_BASIC_INFORMATION": "Basic Information",
+		"Document Package Name": "Document Package Name"
+	}
+}

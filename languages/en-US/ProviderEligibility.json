@@ -1,0 +1,9 @@
+{
+	"php": {
+		"ProviderEligibility": "Provider Eligibility",
+		"SINGLE_ProviderEligibility": "Provider Eligibility",
+		"LBL_CUSTOM_INFORMATION": "Custom Information",
+		"LBL_BASIC_INFORMATION": "Basic Information",
+		"Criteria Name": "Criteria Name"
+	}
+}

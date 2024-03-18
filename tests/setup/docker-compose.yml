@@ -1,0 +1,112 @@
+version: "3.8"
+services:
+    yeti-db:
+        container_name: yeti-db
+        image: mariadb:10.5
+        environment:
+            - MYSQL_ROOT_PASSWORD=yetirootsecret
+            - MYSQL_DATABASE=yetiforce
+            - MYSQL_USER=yeti
+            - MYSQL_PASSWORD=yetidbsecret
+            - TZ=Europe/Warsaw
+        healthcheck:
+            test: "/usr/bin/mysql --user=yeti --password=yetidbsecret --execute \"SHOW DATABASES;\""
+            interval: 10s
+            timeout: 1s
+            retries: 5
+        ports:
+            - 3306:3306
+        volumes:
+            - ./db-data:/var/lib/mysql
+            - ./configs/db:/etc/mysql/mariadb.conf.d
+        restart: unless-stopped
+        deploy:
+            resources:
+                limits:
+                    cpus: '8'
+                    memory: 16G
+                reservations:
+                    memory: 12G
+    yeti-crm:
+        container_name: yeti-crm
+        image: ghcr.io/dotsystemsspzoo/cms:prod
+        environment:
+            - TZ=Europe/Warsaw
+            - GUI_MODE=true
+        volumes:
+            - ./yeti-data:/var/www/html:cached
+            - ./configs/cms/config:/var/www/html/config
+            - ./configs/cms/php/php-fpm-pool.conf:/etc/php/7.4/fpm/pool.d/www.conf
+            - ./configs/cms/php/yetiforce.ini:/etc/php/7.4/mods-available/yetiforce.ini
+            - ./configs/cms/nginx/yetiforce.conf:/etc/nginx/yetiforce.conf
+            - ./yeti-storage:/var/www/html/storage
+            - ./yeti-export:/var/www/html/backup
+            - /var/log/cms:/var/www/html/cache
+            - /var/log/nginx:/var/log/nginx
+            - /data/sftp/templates/templates:/var/www/html/storage/Templates
+            - ~/.git-credentials:/.git-credentials
+            - ./configs/cms/certificate/server.crt:/etc/nginx/ssl/fullchain.pem
+            - ./configs/cms/certificate/server.key:/etc/nginx/ssl/privkey.pem
+            - ./yeti-logs:/logs
+        depends_on:
+            - yeti-db
+        stop_grace_period: 5m
+        restart: unless-stopped
+        deploy:
+            resources:
+                limits:
+                    cpus: '6'
+                    memory: 8G
+                reservations:
+                    memory: 4G
+        hostname: cms
+        cap_add:
+            - SYS_PTRACE
+    yeti-sftp:
+        container_name: yeti-sftp
+        image: ghcr.io/dotsystemspzoo/sftp:latest
+        ports:
+            - "2222:22"
+        volumes:
+            - /data/cms/configs/sftp/users/id_rsa_funder_akutowska.pub:/home/sftp-signing-funder/.ssh/keys/id_rsa_akutowska.pub:ro
+            - /data/cms/configs/sftp/users/id_rsa_funder_dbogumil.pub:/home/sftp-signing-funder/.ssh/keys/id_rsa_dbogumil.pub:ro
+            - /data/cms/configs/sftp/users/id_rsa_funder_cms.pub:/home/sftp-signing-funder/.ssh/keys/id_rsa_cms.pub:ro
+            - /data/cms/configs/sftp/users/id_rsa_lwb_akutowska.pub:/home/sftp-signing-lwb/.ssh/keys/id_rsa_akutowska.pub:ro
+            - /data/cms/configs/sftp/users/id_rsa_lwb_dbogumil.pub:/home/sftp-signing-lwb/.ssh/keys/id_rsa_dbogumil.pub:ro
+            - /data/cms/configs/sftp/users/id_rsa_lwb_cms.pub:/home/sftp-signing-lwb/.ssh/keys/id_rsa_cms.pub:ro
+            - /data/sftp:/data/sftp
+            - /data/cms/configs/sftp/host/ssh_host_ed25519_key:/etc/ssh/ssh_host_ed25519_key
+            - /data/cms/configs/sftp/host/ssh_host_rsa_key:/etc/ssh/ssh_host_rsa_key
+            - /data/cms/configs/sftp/scripts/bizon.sh:/etc/sftp.d/100-bizon.sh
+        command: >
+            sftp-signing-funder::1001:1007
+            sftp-signing-lwb::1004:1011
+            sftp-templates::1015:1016
+        restart: unless-stopped
+        deploy:
+            resources:
+                limits:
+                    cpus: '2'
+                    memory: 4G
+                reservations:
+                    memory: 1G
+    proxy:
+        container_name: proxy
+        image: ghcr.io/linuxserver/nginx
+        environment:
+            - PUID=1001
+            - GUID=1002
+            - TZ=Europe/Warsaw
+            - DOCKER_MODS=linuxserver/mods:nginx-proxy-confs
+        volumes:
+            - ./configs/proxy:/config
+        ports:
+            - 443:443
+        restart: unless-stopped
+        deploy:
+            resources:
+                limits:
+                    cpus: '2'
+                    memory: 4G
+                reservations:
+                    memory: 1G

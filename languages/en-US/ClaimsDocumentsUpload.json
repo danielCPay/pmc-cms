@@ -1,0 +1,9 @@
+{
+	"php": {
+		"ClaimsDocumentsUpload": "Claims Documents Upload",
+		"SINGLE_ClaimsDocumentsUpload": "Claims Documents Upload",
+		"LBL_CUSTOM_INFORMATION": "Custom Information",
+		"LBL_BASIC_INFORMATION": "Basic Information",
+		"url": "url"
+	}
+}

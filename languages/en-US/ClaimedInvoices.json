@@ -1,0 +1,9 @@
+{
+	"php": {
+		"ClaimedInvoices": "Claimed Invoices",
+		"SINGLE_ClaimedInvoices": "Claimed Invoices",
+		"LBL_CUSTOM_INFORMATION": "Custom Information",
+		"LBL_BASIC_INFORMATION": "Basic Information",
+		"Name": "Name"
+	}
+}

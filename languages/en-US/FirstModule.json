@@ -1,0 +1,9 @@
+{
+	"php": {
+		"FirstModule": "Test1 Module label",
+		"SINGLE_FirstModule": "Test1 Module label",
+		"LBL_CUSTOM_INFORMATION": "Custom Information",
+		"LBL_BASIC_INFORMATION": "Basic Information",
+		"Test1 field label": "Test1 field label"
+	}
+}

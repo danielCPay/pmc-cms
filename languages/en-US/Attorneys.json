@@ -1,0 +1,9 @@
+{
+	"php": {
+		"Attorneys": "Attorneys",
+		"SINGLE_Attorneys": "Attorneys",
+		"LBL_CUSTOM_INFORMATION": "Custom Information",
+		"LBL_BASIC_INFORMATION": "Basic Information",
+		"Attorney Name": "Attorney Name"
+	}
+}

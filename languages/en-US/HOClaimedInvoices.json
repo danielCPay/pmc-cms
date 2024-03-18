@@ -1,0 +1,9 @@
+{
+	"php": {
+		"HOClaimedInvoices": "HO Claimed Invoices",
+		"SINGLE_HOClaimedInvoices": "HO Claimed Invoices",
+		"LBL_CUSTOM_INFORMATION": "Custom Information",
+		"LBL_BASIC_INFORMATION": "Basic Information",
+		"HO Claimed Invoice Name": "HO Claimed Invoice Name"
+	}
+}

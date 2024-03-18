@@ -1,0 +1,15 @@
+{
+  "name": "amtrust-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "basic.js",
+  "author": "Michał Kamiński <mkaminski@dotsystems.pl>",
+  "license": "ISC",
+  "scripts": {
+    "convert-har": "har-to-k6"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "har-to-k6": "^0.9.0"
+  }
+}

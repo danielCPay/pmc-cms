@@ -1,0 +1,9 @@
+{
+	"php": {
+		"ProviderContacts": "Provider Contacts",
+		"SINGLE_ProviderContacts": "Provider Contacts",
+		"LBL_CUSTOM_INFORMATION": "Custom Information",
+		"LBL_BASIC_INFORMATION": "Basic Information",
+		"Provider Contact Name": "Provider Contact Name"
+	}
+}

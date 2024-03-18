@@ -1,0 +1,9 @@
+{
+	"php": {
+		"BatchTasks": "Batch Tasks",
+		"SINGLE_BatchTasks": "Batch Tasks",
+		"LBL_CUSTOM_INFORMATION": "Custom Information",
+		"LBL_BASIC_INFORMATION": "Basic Information",
+		"Batch Task Name": "Batch Task Name"
+	}
+}

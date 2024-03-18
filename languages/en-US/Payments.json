@@ -1,0 +1,9 @@
+{
+	"php": {
+		"Payments": "Payments",
+		"SINGLE_Payments": "Payments",
+		"LBL_CUSTOM_INFORMATION": "Custom Information",
+		"LBL_BASIC_INFORMATION": "Basic Information",
+		"Payment Name": "Payment Name"
+	}
+}

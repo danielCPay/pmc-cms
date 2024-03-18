@@ -1,0 +1,20 @@
+{
+	"php": {
+		"Cases": "Cases",
+		"SINGLE_Cases": "Cases",
+		"LBL_CUSTOM_INFORMATION": "Custom Information",
+		"LBL_BASIC_INFORMATION": "Basic Information",
+		"Case ID": "Case ID",
+		"LBL_MERGING_SPECIAL": "Merge Cases",
+		"LBL_RECORD_DETAILS_PRELITIGATION": "Pre-litigation",
+		"LBL_RECORD_DETAILS_LITIGATION": "Litigation",
+		"LBL_RECORD_DETAILS_TRIAL": "Trial",
+		"LBL_RECORD_DETAILS_SETTLEMENT": "Settlement",
+		"MERGE_TOO_MANY_PROVIDERS_SELECTED": "Too many distinct providers to merge into single record",
+		"MERGE_INVALID_TYPE_OF_CLAIM": "Some of the cases selected have unsupported type of claim",
+		"MERGE_AOB_AND_ANOTHER_TYPE": "Selected cases include AOB case and AOB cases can only be merged only with other AOB cases",
+		"MERGE_LOP_AND_NO_HO": "Selected cases include LOP case and LOP cases must be merged to HO case",
+		"MERGE_HO_AND_ANOTHER_TYPE": "Selected cases include HO case and HO case can only be merged to LOP cases",
+		"MERGE_MORE_THAN_ONE_HO": "Selected cases include more than one HO case"
+	}
+}

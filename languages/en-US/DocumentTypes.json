@@ -1,0 +1,10 @@
+{
+	"php": {
+		"DocumentTypes": "Document Types",
+		"SINGLE_DocumentTypes": "Document Types",
+		"LBL_CUSTOM_INFORMATION": "Custom Information",
+		"LBL_BASIC_INFORMATION": "Basic Information",
+		"Document Type": "Document Type",
+		"LBL_HIERARCHY_LOOP_ERROR": "This Document Type cannot be saved because it creates a loop in the hierarchy."
+	}
+}

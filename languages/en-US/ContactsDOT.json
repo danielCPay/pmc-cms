@@ -1,0 +1,9 @@
+{
+	"php": {
+		"ContactsDOT": "Contacts",
+		"SINGLE_ContactsDOT": "Contacts",
+		"LBL_CUSTOM_INFORMATION": "Custom Information",
+		"LBL_BASIC_INFORMATION": "Basic Information",
+		"Name": "Name"
+	}
+}

@@ -1,0 +1,12 @@
+{
+  "php": {
+    "DotsPBIReports": "Reports",
+    "LBL_NO_REPORTS_FOUND": "No reports found",
+    "LBL_AVAILABLE_REPORTS": "Available reports",
+    "LBL_REPORT": "Report",
+    "LBL_EDITABLE": "Editable"
+  },
+  "js": {
+    "LBL_DOTS_PBI_REPORTS_COULDNT_REFRESH_TOKEN": "Couldn't refresh access token, please refresh page"
+  }
+}

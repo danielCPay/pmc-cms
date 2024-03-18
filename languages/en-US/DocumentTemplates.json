@@ -1,0 +1,9 @@
+{
+	"php": {
+		"DocumentTemplates": "Document Templates",
+		"SINGLE_DocumentTemplates": "Document Templates",
+		"LBL_CUSTOM_INFORMATION": "Custom Information",
+		"LBL_BASIC_INFORMATION": "Basic Information",
+		"Document Template Name": "Document Template Name"
+	}
+}

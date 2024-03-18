@@ -1,0 +1,1 @@
+INSERT INTO `vtiger_links` (`tabid`, `linktype`, `linklabel`, `linkurl`, `linkicon`, `sequence`, `handler_path`, `handler_class`, `handler`, `params`) VALUES (3, 'DASHBOARDWIDGET', 'Weekly Calendar', 'index.php?module=Home&view=ShowWidget&name=WeeklyCalendar', '', 0, NULL, NULL, NULL, NULL);

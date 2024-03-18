@@ -1,0 +1,18 @@
+# ignore private files
+**/.*
+
+# but include .htaccess
+!**/.htaccess
+
+# ignore docker
+Dockerfile
+docker-compose.yml
+
+# ignore readmes
+*.md
+
+# ignore backup
+backup/
+
+# ignore node_modules for minification
+public_html/src/node_modules

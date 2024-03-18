@@ -1,0 +1,9 @@
+{
+	"php": {
+		"HelpInfo": "Help Info",
+		"SINGLE_HelpInfo": "Help Info",
+		"LBL_CUSTOM_INFORMATION": "Custom Information",
+		"LBL_BASIC_INFORMATION": "Basic Information",
+		"Module Label": "Module Label"
+	}
+}

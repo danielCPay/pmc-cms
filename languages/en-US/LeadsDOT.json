@@ -1,0 +1,9 @@
+{
+	"php": {
+		"LeadsDOT": "Leads",
+		"SINGLE_LeadsDOT": "Leads",
+		"LBL_CUSTOM_INFORMATION": "Custom Information",
+		"LBL_BASIC_INFORMATION": "Basic Information",
+		"Name": "Name"
+	}
+}

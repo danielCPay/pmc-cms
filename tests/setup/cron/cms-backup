@@ -1,0 +1,25 @@
+#!/bin/bash
+exec &> /var/log/cms-backup.log
+NOW=$(date +%Y-%m-%d_%H-%M-%S)
+
+echo "Backing up DB..."
+/usr/bin/docker exec yeti-db sh -c "rm -rf /var/backups/* && mariabackup --backup --target-dir=/var/backups/ --user=root --password=yetirootsecret && mariabackup --prepare --target-dir=/var/backups/" && /usr/bin/docker exec yeti-db tar cv -C /var/backups/ . | gzip --stdout > "/backup/backups/db-$NOW.tar.gz"
+
+echo "Backing up CMS - no storage/..."
+tar czvhf "/backup/backups/cms-nostorage-$NOW.tar.gz" --exclude="cache/**/*" --exclude="storage/**/*" -C /data/cms/yeti-data .
+
+echo "Backing up storage..."
+tar czvhf "/backup/backups/storage-$NOW.tar.gz" -C /docs/yeti-storage .
+
+echo "Backing up configs..."
+tar czvhf "/backup/backups/config-$NOW.tar.gz" -C /data/cms configs/ docker-compose-cms.yml docker-compose-portal.yml all-docker-compose.sh
+
+echo "Backing up sftp..."
+tar czvhf "/backup/backups/sftp-$NOW.tar.gz" -C /docs/sftp .
+
+echo "Cleanup old backups..."
+ls -tr /backup/backups/storage-*.gz | head -n -3 | xargs rm -f
+ls -tr /backup/backups/cms-nostorage-*.gz | head -n -7 | xargs rm -f
+ls -tr /backup/backups/db-*.gz | head -n -7 | xargs rm -f
+ls -tr /backup/backups/config-*.gz | head -n -7 | xargs rm -f
+ls -tr /backup/backups/sftp-*.gz | head -n -3 | xargs rm -f

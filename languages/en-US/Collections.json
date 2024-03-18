@@ -1,0 +1,9 @@
+{
+	"php": {
+		"Collections": "Collections",
+		"SINGLE_Collections": "Collections",
+		"LBL_CUSTOM_INFORMATION": "Custom Information",
+		"LBL_BASIC_INFORMATION": "Basic Information",
+		"Collection Name": "Collection Name"
+	}
+}

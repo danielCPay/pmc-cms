@@ -1,0 +1,9 @@
+{
+	"php": {
+		"Courts": "Courts",
+		"SINGLE_Courts": "Courts",
+		"LBL_CUSTOM_INFORMATION": "Custom Information",
+		"LBL_BASIC_INFORMATION": "Basic Information",
+		"Court Name": "Court Name"
+	}
+}

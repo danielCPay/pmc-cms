@@ -1,0 +1,9 @@
+{
+	"php": {
+		"CaseHandlers": "Case Handlers",
+		"SINGLE_CaseHandlers": "Case Handlers",
+		"LBL_CUSTOM_INFORMATION": "Custom Information",
+		"LBL_BASIC_INFORMATION": "Basic Information",
+		"Case Handler Name": "Case Handler Name"
+	}
+}
