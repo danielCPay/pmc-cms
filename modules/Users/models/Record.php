@@ -1034,9 +1034,6 @@ class Users_Record_Model extends Vtiger_Record_Model
 			\App\Log::info('User not found: ' . $userName, 'UserAuthentication');
 			return false;
 		}
-		var_dump($row);		
-		exit();
-
 		$this->set('id', $row['id']);
 		$userRecordModel = static::getInstanceFromFile($row['id']);
 		if ('Active' !== $userRecordModel->get('status')) {
