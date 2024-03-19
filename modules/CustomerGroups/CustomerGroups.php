@@ -34,7 +34,6 @@ class CustomerGroups extends Vtiger_CRMEntity
 		'u_yf_customergroups' => 'customergroupsid',
 		'u_yf_customergroupscf' => 'customergroupsid',
 	];
-
 	/**
 	 * Mandatory for Listing (Related listview).
 	 */
