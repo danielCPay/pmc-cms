@@ -131,6 +131,8 @@ class Users_Login_Action extends \App\Controller\Action
 			$this->cleanInstallationFiles();
 		}
 		$this->userRecordModel = Users_Record_Model::getCleanInstance('Users')->set('user_name', $userName);
+		var_dump($this->userRecordModel);
+		exit();
 		if (!empty($password) && $this->userRecordModel->doLogin($password)) {
 			$this->userModel = App\User::getUserModel($this->userRecordModel->getId());
 			$this->afterLogin($request);
