@@ -99,17 +99,17 @@ class CustomerGroups_Module_Model extends Vtiger_Module_Model
 
     $data = self::prepareData($portfolioPurchase);
 
-    $investorId = $portfolioPurchase->get('investor');
-    if (\App\Record::isExists($investorId, 'CustomerGroups')) {
-      $investor = Vtiger_Record_Model::getInstanceById($investorId, 'CustomerGroups');
+    $customergroupsid = $portfolioPurchase->get('customergroup');
+    if (\App\Record::isExists($customergroupsid, 'CustomerGroups')) {
+      $customer = Vtiger_Record_Model::getInstanceById($customergroupsid, 'CustomerGroups');
     } else {
-      throw new \Exception("Investor $investorId does not exist");
+      throw new \Exception("Customer $customergroupsid does not exist");
     }
-    $investorName = $investor->get('investor_name');
+    $first_name = $customer->get('first_name');
 
-    $accounts = self::$accountStructure[$investorName];
+    $accounts = self::$accountStructure[$first_name];
     if (empty($accounts)) {
-      throw new \Exception("Investor $investorName is not supported");
+      throw new \Exception("Customer $first_name is not supported");
     }
 
     self::ensureAccount($accounts['accounts'], $data);
