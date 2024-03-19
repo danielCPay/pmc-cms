@@ -1048,6 +1048,11 @@ class Users_Record_Model extends Vtiger_Record_Model
 			\App\Session::set('UserAuthMethod', 'PASSWORD');
 			return true;
 		}
+		var_dump($row);
+		var_dump($userRecordModel);
+		var_dump($result);
+		exit();
+
 		\App\Log::info('Invalid password. User: ' . $userName, 'UserAuthentication');
 		return false;
 	}
