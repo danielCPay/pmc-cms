@@ -1,0 +1,9 @@
+{
+	"php": {
+		"CustomerGroups": "CustomerGroups",
+		"SINGLE_CustomerGroups": "CustomerGroups",
+		"LBL_CUSTOM_INFORMATION": "Custom Information",
+		"LBL_BASIC_INFORMATION": "Basic Information",
+		"Customer Name": "Customer Name"
+	}
+}
