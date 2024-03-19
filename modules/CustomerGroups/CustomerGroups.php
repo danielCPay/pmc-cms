@@ -40,12 +40,12 @@ class CustomerGroups extends Vtiger_CRMEntity
 	 */
 	public $list_fields = [
 		// Format: Field Label => Array(tablename, columnname)
-		'Name' => ['customergroups', 'first_name'],
+		'Customer Name' => ['customers', 'first_name'],
 		'Assigned To' => ['crmentity', 'smownerid'],
 	];
 	public $list_fields_name = [
 		// Format: Field Label => fieldname
-		'Name' => 'first_name',
+		'Customer Name' => 'first_name',
 		'Assigned To' => 'assigned_user_id',
 	];
 	// Make the field link to detail view
@@ -53,7 +53,7 @@ class CustomerGroups extends Vtiger_CRMEntity
 	// For Popup listview and UI type support
 	public $search_fields = [
 		// Format: Field Label => Array(tablename, columnname)
-		'Name' => ['customergroups', 'first_name'],
+		'Customer Name' => ['customers', 'first_name'],
 		'Assigned To' => ['vtiger_crmentity', 'assigned_user_id'],
 	];
 	public $search_fields_name = [];
