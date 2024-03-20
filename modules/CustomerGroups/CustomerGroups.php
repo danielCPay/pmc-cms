@@ -15,7 +15,6 @@ class CustomerGroups extends Vtiger_CRMEntity
 {
 	public $table_name = 'u_yf_customergroups';
 	public $table_index = 'customergroupsid';
-
 	/**
 	 * Mandatory table for supporting custom fields.
 	 */
