@@ -18,7 +18,6 @@ class CustomerGroups extends Vtiger_CRMEntity
 	 * Mandatory table for supporting custom fields.
 	 */
 	public $customFieldTable = ['u_yf_customergroupscf', 'customergroupsid'];
-
 	/**
 	 * Mandatory for Saving, Include tables related to this module.
 	 */
