@@ -66,7 +66,6 @@ class CustomerGroups extends Vtiger_CRMEntity
 	public $mandatory_fields = ['first_name', 'assigned_user_id'];
 	public $default_order_by = '';
 	public $default_sort_order = 'ASC';
-
 	/**
 	 * Invoked when special actions are performed on the module.
 	 *
