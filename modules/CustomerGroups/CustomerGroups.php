@@ -8,7 +8,6 @@
  * All Rights Reserved.
  * Contributor(s): YetiForce.com
  * ********************************************************************************** */
-
 include_once 'modules/Vtiger/CRMEntity.php';
 
 class CustomerGroups extends Vtiger_CRMEntity
