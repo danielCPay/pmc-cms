@@ -48,26 +48,26 @@ class Investors_Module_Model extends Vtiger_Module_Model
                     ],
                   ]
                 ],
-                ]
               ]
-            ],
+            ]
           ],
-          '[Portfolio Purchase] Deferred Factor Fee' => [
-            'type' => 'Other Current Liability',
-            'detailType' => 'DeferredRevenue',
-          ],
-          '[Portfolio Purchase] Realized Factor Fee' => [
-            'type' => 'Income',
-            'detailType' => 'ServiceFeeIncome',
-          ],
-          '[Portfolio Purchase] Excess Hurdle Payable' => [
-            'type' => 'Accounts Payable',
-            'detailType' => 'AccountsPayable',
-            'description' => 'Excess Hurdle Payable'
-          ],
-        ]
+        ],
+        '[Portfolio Purchase] Deferred Factor Fee' => [
+          'type' => 'Other Current Liability',
+          'detailType' => 'DeferredRevenue',
+        ],
+        '[Portfolio Purchase] Realized Factor Fee' => [
+          'type' => 'Income',
+          'detailType' => 'ServiceFeeIncome',
+        ],
+        '[Portfolio Purchase] Excess Hurdle Payable' => [
+          'type' => 'Accounts Payable',
+          'detailType' => 'AccountsPayable',
+          'description' => 'Excess Hurdle Payable'
+        ],
       ]
-    ];
+    ]
+  ];
 
   public static function prepareData(PortfolioPurchases_Record_Model $portfolioPurchase)
   {
@@ -82,9 +82,9 @@ class Investors_Module_Model extends Vtiger_Module_Model
 
     $providerName = $provider->get('provider_name');
 
-    return [ 
-      '[Provider]' => $providerName, 
-      '[Portfolio Purchase]' => $portfolioPurchaseName 
+    return [
+      '[Provider]' => $providerName,
+      '[Portfolio Purchase]' => $portfolioPurchaseName
     ];
   }
 
@@ -106,6 +106,7 @@ class Investors_Module_Model extends Vtiger_Module_Model
       throw new \Exception("Investor $investorId does not exist");
     }
     $investorName = $investor->get('investor_name');
+    var_dump("Hola soy data: " . $data);
 
     $accounts = self::$accountStructure[$investorName];
     if (empty($accounts)) {
@@ -117,8 +118,7 @@ class Investors_Module_Model extends Vtiger_Module_Model
 
   private static function ensureAccount(array $accounts, $data, string $parentAccount = '')
   {
-    foreach ($accounts as $accountName => $account)
-    {
+    foreach ($accounts as $accountName => $account) {
       ['type' => $type, 'detailType' => $detailType] = $account;
       $description = $account['description'] ?? null;
       $subAccounts = $account['accounts'] ?? null;
