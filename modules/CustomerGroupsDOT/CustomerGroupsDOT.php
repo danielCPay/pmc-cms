@@ -22,7 +22,6 @@ class CustomerGroupsDOT extends Vtiger_CRMEntity
 	 * Mandatory for Saving, Include tables related to this module.
 	 */
 	public $tab_name = ['vtiger_crmentity', 'u_yf_customergroupsdot', 'u_yf_customergroupsdotcf'];
-
 	/**
 	 * Mandatory for Saving, Include tablename and tablekey columnname here.
 	 */
