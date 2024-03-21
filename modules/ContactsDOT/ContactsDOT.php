@@ -34,7 +34,6 @@ class ContactsDOT extends Vtiger_CRMEntity
 		'u_yf_contactsdot' => 'contactsdotid',
 		'u_yf_contactsdotcf' => 'contactsdotid',
 	];
-
 	/**
 	 * Mandatory for Listing (Related listview).
 	 */
