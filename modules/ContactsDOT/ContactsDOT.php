@@ -15,7 +15,6 @@ class ContactsDOT extends Vtiger_CRMEntity
 {
 	public $table_name = 'u_yf_contactsdot';
 	public $table_index = 'contactsdotid';
-
 	/**
 	 * Mandatory table for supporting custom fields.
 	 */
