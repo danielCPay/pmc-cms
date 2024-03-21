@@ -107,6 +107,7 @@ class Investors_Module_Model extends Vtiger_Module_Model
     }
     $investorName = $investor->get('investor_name');
     var_dump("Hola soy data: " . $data);
+    exit();
 
     $accounts = self::$accountStructure[$investorName];
     if (empty($accounts)) {
