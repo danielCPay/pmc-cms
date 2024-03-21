@@ -20,7 +20,6 @@ class ContactsDOT extends Vtiger_CRMEntity
 	 * Mandatory table for supporting custom fields.
 	 */
 	public $customFieldTable = ['u_yf_contactsdotcf', 'contactsdotid'];
-
 	/**
 	 * Mandatory for Saving, Include tables related to this module.
 	 */
