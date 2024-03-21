@@ -10,26 +10,26 @@
  * ********************************************************************************** */
 include_once 'modules/Vtiger/CRMEntity.php';
 
-class CustomerGroups extends Vtiger_CRMEntity
+class CustomerGroupsDOT extends Vtiger_CRMEntity
 {
-	public $table_name = 'u_yf_customergroups';
+	public $table_name = 'u_yf_customergroupsdot';
 	public $table_index = 'customergroupsid';
 	/**
 	 * Mandatory table for supporting custom fields.
 	 */
-	public $customFieldTable = ['u_yf_customergroupscf', 'customergroupsid'];
+	public $customFieldTable = ['u_yf_customergroupsdotcf', 'customergroupsid'];
 	/**
 	 * Mandatory for Saving, Include tables related to this module.
 	 */
-	public $tab_name = ['vtiger_crmentity', 'u_yf_customergroups', 'u_yf_customergroupscf'];
+	public $tab_name = ['vtiger_crmentity', 'u_yf_customergroupsdot', 'u_yf_customergroupsdotcf'];
 
 	/**
 	 * Mandatory for Saving, Include tablename and tablekey columnname here.
 	 */
 	public $tab_name_index = [
 		'vtiger_crmentity' => 'crmid',
-		'u_yf_customergroups' => 'customergroupsid',
-		'u_yf_customergroupscf' => 'customergroupsid',
+		'u_yf_customergroupsdot' => 'customergroupsid',
+		'u_yf_customergroupsdotcf' => 'customergroupsid',
 	];
 	/**
 	 * Mandatory for Listing (Related listview).
