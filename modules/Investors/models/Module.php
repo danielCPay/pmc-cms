@@ -106,9 +106,7 @@ class Investors_Module_Model extends Vtiger_Module_Model
       throw new \Exception("Investor $investorId does not exist");
     }
     $investorName = $investor->get('investor_name');
-    var_dump("Hola soy data: " . $data);
-    exit();
-
+   
     $accounts = self::$accountStructure[$investorName];
     if (empty($accounts)) {
       throw new \Exception("Investor $investorName is not supported");
