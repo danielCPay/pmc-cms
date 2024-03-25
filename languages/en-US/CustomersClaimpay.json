@@ -1,9 +1,0 @@
-{
-	"php": {
-		"CustomersClaimpay": "CustomersClaimpay",
-		"SINGLE_CustomersClaimpay": "CustomersClaimpay",
-		"LBL_CUSTOM_INFORMATION": "Custom Information",
-		"LBL_BASIC_INFORMATION": "Basic Information",
-		"first_name": "first_name"
-	}
-}
